@@ -1,0 +1,13 @@
+# Залежності Node.js
+lab1/node_modules/
+
+# Зібрані файли Vite
+lab1/dist/
+
+# Локальні налаштування
+lab1/.env
+lab1/.env.*
+
+# Системні файли
+.DS_Store
+Thumbs.db
