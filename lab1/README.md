@@ -1,44 +1,51 @@
-# Lab1
+# Лабораторна робота №1. To-Do List на Vue 3
 
-This template should help get you started developing with Vue 3 in Vite.
+## 1. Кроки запуску
 
-## Recommended IDE Setup
+1. Встановити Node.js.
+2. Відкрити термінал у кореневій папці репозиторію.
+3. Перейти до папки проєкту:
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+   ```bash
+   cd lab1
+   ```
 
-## Recommended Browser Setup
+4. Встановити залежності:
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+   ```bash
+   npm install
+   ```
 
-## Customize configuration
+5. Запустити застосунок:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+   ```bash
+   npm run dev
+   ```
 
-## Project Setup
+6. Відкрити адресу, зазначену в терміналі Vite (зазвичай `http://localhost:5173/`).
 
-```sh
-npm install
-```
+## 2. Скріншоти
 
-### Compile and Hot-Reload for Development
+Скріншоти роботи застосунку та Vue DevTools розміщені в папці `lab1/screenshots/`.
 
-```sh
-npm run dev
-```
+- `main-page.png` — головна сторінка застосунку.
+- `add-task.png` — додавання завдання.
+- `filters.png` — фільтрація завдань.
+- `pagination.png` — пагінація.
+- `vue-devtools.png` — перегляд компонентів і реактивного стану у Vue DevTools.
 
-### Compile and Minify for Production
+## 3. Використання Composition API
 
-```sh
-npm run build
-```
+- **ref** — у `src/App.vue` для зберігання списку завдань і поточної сторінки.
+- **reactive** — у `src/App.vue` для зберігання параметрів фільтрації.
+- **computed** — у `src/App.vue` для обчислення кількості завдань, відфільтрованого списку та кількості сторінок.
+- **watch** — у `src/App.vue` для автоматичного збереження змін у LocalStorage.
 
-### Lint with [ESLint](https://eslint.org/)
+## 4. Використані директиви Vue
 
-```sh
-npm run lint
-```
+- **v-model** — `src/components/TaskForm.vue`, `src/components/TaskFilters.vue`: двостороння прив'язка значень полів форм.
+- **v-for** — `src/components/TaskList.vue`: виведення списку завдань.
+- **v-if, v-else** — `src/components/TaskList.vue`: умовне відображення списку або повідомлення про відсутність завдань.
+- **v-show** — у компонентах застосунку для керування видимістю елементів.
+- **: (v-bind)** — прив'язка атрибутів і класів елементів.
+- **@ (v-on)** — обробка подій натискання кнопок та інших дій користувача.
